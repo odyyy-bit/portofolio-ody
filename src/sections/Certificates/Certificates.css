@@ -1,0 +1,152 @@
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 260px));
+  gap: 18px;
+}
+
+.certificate-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-md);
+}
+
+.certificate-image-wrap {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--bg-secondary);
+  cursor: pointer;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.certificate-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.certificate-image-wrap:hover .certificate-image {
+  transform: scale(1.03);
+}
+
+.certificate-zoom-badge {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  color: #f8fafc;
+  background: rgba(9, 9, 11, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.certificate-body {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.certificate-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-blue-text);
+}
+
+.certificate-award-icon {
+  color: var(--accent-purple);
+}
+
+.certificate-title {
+  font-size: 0.94rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.certificate-issuer {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.certificate-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-purple-text);
+}
+
+.certificate-link:hover {
+  text-decoration: underline;
+}
+
+/* Modal Preview */
+.cert-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(5, 5, 8, 0.84);
+  backdrop-filter: blur(10px);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.cert-modal-card {
+  position: relative;
+  max-width: 720px;
+  width: 100%;
+  padding: 18px;
+}
+
+.cert-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(9, 9, 11, 0.85);
+  color: #f8fafc;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.cert-modal-image {
+  width: 100%;
+  max-height: 68vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
+}
+
+.cert-modal-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.cert-modal-info p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 540px) {
+  .certificates-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}

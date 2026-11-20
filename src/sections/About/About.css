@@ -1,0 +1,104 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.about-narrative,
+.about-biodata {
+  padding: 28px;
+}
+
+.about-block + .about-block {
+  margin-top: 26px;
+  padding-top: 24px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.about-block-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.about-icon {
+  color: var(--accent-purple);
+  flex-shrink: 0;
+}
+
+.about-block-head h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.about-text {
+  color: var(--text-secondary);
+  font-size: 0.96rem;
+  margin-bottom: 12px;
+}
+
+.about-interests {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.about-interests li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--text-primary);
+  font-size: 0.92rem;
+}
+
+.about-interests li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+}
+
+.biodata-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.biodata-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.biodata-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.biodata-row dt {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.biodata-row dd {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}

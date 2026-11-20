@@ -1,0 +1,98 @@
+:root,
+[data-theme='dark'] {
+  /* Color Palette - Dark Obsidian & Aurora Accents */
+  --bg-primary: #09090b;
+  --bg-secondary: #121216;
+  --bg-elevated: #18181d;
+
+  /* Navbar & Overlay Surfaces */
+  --navbar-scrolled-bg: rgba(9, 9, 11, 0.8);
+  --mobile-drawer-bg: rgba(12, 12, 16, 0.96);
+  --footer-bg: rgba(10, 10, 13, 0.85);
+  --input-bg: rgba(9, 9, 11, 0.65);
+  --pill-bg: rgba(255, 255, 255, 0.03);
+
+  /* Glassmorphism Tokens */
+  --glass-bg: rgba(24, 24, 29, 0.65);
+  --glass-bg-hover: rgba(32, 32, 40, 0.86);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-hover: rgba(139, 92, 246, 0.48);
+  --glass-blur: blur(16px);
+  --card-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.55);
+
+  /* Text Tokens */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  /* Accent Tokens (Purple & Blue) */
+  --accent-purple: #8b5cf6;
+  --accent-purple-text: #c4b5fd;
+  --accent-purple-soft: rgba(139, 92, 246, 0.16);
+  --accent-blue: #3b82f6;
+  --accent-blue-text: #93c5fd;
+  --accent-blue-soft: rgba(59, 130, 246, 0.16);
+
+  /* Gradients & Glows */
+  --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+  --gradient-text: linear-gradient(135deg, #c4b5fd 0%, #8b5cf6 45%, #60a5fa 100%);
+  --glow-purple: rgba(139, 92, 246, 0.22);
+  --glow-blue: rgba(59, 130, 246, 0.22);
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Layout & Spacing */
+  --container-max: 1180px;
+  --section-padding: 96px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-theme='light'] {
+  /* Color Palette - Clean Daylight White & Charcoal */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #eef2f6;
+  --bg-elevated: #ffffff;
+
+  /* Navbar & Overlay Surfaces */
+  --navbar-scrolled-bg: rgba(248, 250, 252, 0.85);
+  --mobile-drawer-bg: rgba(255, 255, 255, 0.97);
+  --footer-bg: rgba(241, 245, 249, 0.9);
+  --input-bg: rgba(255, 255, 255, 0.9);
+  --pill-bg: rgba(15, 23, 42, 0.04);
+
+  /* Light Frosted Glass Tokens */
+  --glass-bg: rgba(255, 255, 255, 0.78);
+  --glass-bg-hover: rgba(255, 255, 255, 0.95);
+  --glass-border: rgba(15, 23, 42, 0.09);
+  --glass-border-hover: rgba(124, 58, 237, 0.42);
+  --card-shadow: 0 12px 30px -12px rgba(15, 23, 42, 0.12);
+
+  /* Text Tokens */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+
+  /* Accent Tokens (Richer contrast on white) */
+  --accent-purple: #7c3aed;
+  --accent-purple-text: #6d28d9;
+  --accent-purple-soft: rgba(124, 58, 237, 0.11);
+  --accent-blue: #2563eb;
+  --accent-blue-text: #1d4ed8;
+  --accent-blue-soft: rgba(37, 99, 235, 0.11);
+
+  /* Gradients & Glows */
+  --gradient-primary: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+  --gradient-text: linear-gradient(135deg, #6d28d9 0%, #7c3aed 45%, #2563eb 100%);
+  --glow-purple: rgba(124, 58, 237, 0.14);
+  --glow-blue: rgba(37, 99, 235, 0.14);
+}

@@ -1,0 +1,76 @@
+.bg-atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bg-mesh-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, var(--glass-border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--glass-border) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at 50% 35%, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.06) 80%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 35%, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.06) 80%);
+  opacity: 0.45;
+}
+
+.bg-aurora {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(110px);
+  will-change: transform;
+}
+
+.bg-aurora-one {
+  width: 480px;
+  height: 480px;
+  top: -120px;
+  left: -100px;
+  background: var(--glow-purple);
+  animation: floatAuroraA 16s ease-in-out infinite alternate;
+}
+
+.bg-aurora-two {
+  width: 520px;
+  height: 520px;
+  bottom: -140px;
+  right: -120px;
+  background: var(--glow-blue);
+  animation: floatAuroraB 20s ease-in-out infinite alternate;
+}
+
+.particle-canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@keyframes floatAuroraA {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  100% {
+    transform: translate(75px, 55px) scale(1.12);
+  }
+}
+
+@keyframes floatAuroraB {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  100% {
+    transform: translate(-80px, -60px) scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-aurora-one,
+  .bg-aurora-two {
+    animation: none;
+  }
+}

@@ -1,0 +1,106 @@
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-left: 36px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 13px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-purple), var(--accent-blue));
+  opacity: 0.55;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -36px;
+  top: 22px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 1px solid rgba(139, 92, 246, 0.55);
+  color: var(--accent-purple-text);
+  display: grid;
+  place-items: center;
+}
+
+.timeline-card {
+  padding: 24px 26px;
+}
+
+.timeline-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--accent-blue-text);
+}
+
+.timeline-badge {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: var(--accent-purple-soft);
+  color: var(--accent-purple-text);
+}
+
+.timeline-role {
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.timeline-org {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.timeline-desc {
+  color: var(--text-secondary);
+  font-size: 0.94rem;
+  margin-bottom: 12px;
+}
+
+.timeline-highlights {
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+.timeline-highlights li {
+  position: relative;
+  padding-left: 16px;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.timeline-highlights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+}
